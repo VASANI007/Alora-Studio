@@ -1,16 +1,21 @@
 <div align="center">
-
-# ✦ ALORA Studio
-
-### **AI-Powered Multi-Agent Development Workspace**
+<img src="alora.jpg" alt="ALORA Studio Logo" width="320"/>
 </div>
 <br>
 
 # 🚧 UNDER CONSTRUCTION 🚧
 
-### **ALORA Studio is currently under active development.**
+### ALORA Studio is currently under active development.
 
+---
 
+## 🎬 ALORA Studio Preview
+
+<div align="center">
+
+https://github.com/user-attachments/assets/f17b10dd-5b4c-4942-9b61-d3274efacac2
+
+</div>
 
 ---
 

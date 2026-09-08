@@ -1,5 +1,5 @@
 <div align="center">
-<img src="alora.jpg" alt="ALORA Studio Logo" width="320"/>
+<img src="alora.png" alt="ALORA Studio Logo" width="800"/>
 </div>
 <br>
 

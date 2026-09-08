@@ -1,28 +1,24 @@
+<div align="center">
+
 # ✦ ALORA Studio
 
-> **An AI-powered multi-agent development workspace built to turn natural-language ideas into structured, executable projects.**
+### **AI-Powered Multi-Agent Development Workspace**
+</div>
+<br>
 
-[![Status](https://img.shields.io/badge/Status-Under%20Construction-orange)]()
-[![Python](https://img.shields.io/badge/Python-3.11%2B-blue)]()
-[![AI](https://img.shields.io/badge/AI-Multi--Agent-purple)]()
-[![Architecture](https://img.shields.io/badge/Architecture-Agent%20Orchestration-green)]()
-[![License](https://img.shields.io/badge/License-MIT-yellow)]()
+# 🚧 UNDER CONSTRUCTION 🚧
 
----
+### **ALORA Studio is currently under active development.**
 
-## 🚧 Project Status
 
-**ALORA Studio is currently under construction.**
-
-The architecture and core system are being designed around a multi-agent workflow where users can describe their requirements through a single conversational interface and ALORA can transform those requirements into a structured project plan, assign tasks to specialized agents, execute those tasks step by step, validate the results, and recover from model/provider failures when possible.
-
-> ⚠️ Features, APIs, agent behavior, UI components, and internal architecture may change during development.
 
 ---
 
 ## 🧠 What is ALORA Studio?
 
-**ALORA Studio** is planned as an AI-powered development environment where the user does not need to manually control every AI model or every development step.
+> **An AI-powered multi-agent development workspace built to turn natural-language ideas into structured, executable projects.**
+
+ALORA Studio is planned as an AI-powered development environment where the user does not need to manually control every AI model or every development step.
 
 Instead, the user communicates with **ALORA through one main chat interface**.
 
@@ -66,34 +62,21 @@ Review
 Completed Project
 ```
 
-The goal is to make the entire process visible inside the ALORA interface.
-
 ---
 
-# 🎯 Core Vision
+## 🎯 Core Vision
 
 ALORA is being designed around a simple idea:
 
 > **One conversation → One project plan → Multiple specialized agents → One coordinated workflow.**
 
-Instead of asking different AI systems separately:
-
-```text
-ChatGPT → Planning
-Gemini  → Coding
-Claude  → Review
-Other AI → Research
-```
-
-ALORA will provide a central orchestration layer that can coordinate different models and providers through a consistent internal structure.
+Instead of asking different AI systems separately, ALORA will provide a central orchestration layer that can coordinate different models and providers through a consistent internal structure.
 
 ---
 
-# 🤖 Multi-Agent System
+## 🤖 Multi-Agent System
 
 ALORA is planned to use specialized agents instead of one general-purpose agent handling everything.
-
-Possible agents include:
 
 | Agent                  | Responsibility                                   |
 | ---------------------- | ------------------------------------------------ |
@@ -110,50 +93,39 @@ Possible agents include:
 | 🔍 Reviewer Agent      | Reviews completed work                           |
 | 🚀 Deployment Agent    | Handles deployment-related tasks                 |
 
-Agents are not intended to operate independently without coordination.
-
-They will operate under the ALORA orchestration system.
-
 ---
 
-# 🧩 Agent ≠ AI Model
+## 🧩 Agent ≠ AI Model
 
 One of the fundamental design principles of ALORA is separating the **agent role** from the **AI model**.
 
-For example:
-
 ```text
-Coder Agent
-     │
-     ▼
-Model Router
-     │
- ┌───┼─────────────┐
- ▼   ▼             ▼
-Gemini  Groq     NVIDIA
+                 AGENT
+                   │
+            ┌──────┴──────┐
+            │             │
+       Instructions     Contract
+            │             │
+            └──────┬──────┘
+                   ▼
+              MODEL ROUTER
+                   │
+       ┌───────────┼───────────┐
+       ▼           ▼           ▼
+    Gemini       Groq        NVIDIA
 ```
 
-The Coder Agent defines:
-
-* What role it has
-* What task it must perform
-* What information it receives
-* What rules it must follow
-* What output structure it must return
+The Coder Agent defines its role, task requirements, rules, and output structure.
 
 The Model Router decides which available model/provider should execute that task.
 
-This separation makes it possible to change models without changing the entire agent architecture.
-
 ---
 
-# 📐 Consistent Agent Workflow
+## 📐 Consistent Agent Workflow
 
 Different AI models can produce different answers.
 
 ALORA therefore aims to standardize the **workflow**, rather than forcing every model to generate identical raw output.
-
-The planned flow is:
 
 ```text
 AI Model
@@ -174,7 +146,7 @@ Project State
 Next Agent
 ```
 
-Every important agent result can follow a structured internal format such as:
+Every important agent result can follow a structured internal format.
 
 ```json
 {
@@ -190,15 +162,11 @@ Every important agent result can follow a structured internal format such as:
 }
 ```
 
-This helps maintain consistency between different AI providers.
-
 ---
 
-# 🗂️ Project State
+## 🗂️ Project State
 
 ALORA is planned to maintain a centralized project state instead of allowing every agent to maintain an isolated understanding of the project.
-
-The project state may contain:
 
 ```text
 PROJECT STATE
@@ -221,11 +189,9 @@ This becomes the project's structured source of truth.
 
 ---
 
-# 🔗 Agent Communication
+## 🔗 Agent Communication
 
 Agents should not rely on uncontrolled direct communication.
-
-The intended architecture is:
 
 ```text
 Agent
@@ -240,23 +206,15 @@ Project State
 Next Agent
 ```
 
-This allows the system to preserve:
-
-* Task dependencies
-* Project decisions
-* File changes
-* Test results
-* Previous agent outputs
-* Execution history
-* Recovery checkpoints
+This helps preserve task dependencies, project decisions, file changes, test results, execution history, and recovery checkpoints.
 
 ---
 
-# ⚡ Intelligent Model Routing
+## ⚡ Intelligent Model Routing
 
 ALORA is planned to support multiple AI providers through a central **AI Gateway / Model Router**.
 
-Instead of sending every task to every model, the router can select an appropriate provider based on factors such as:
+The router can select an appropriate provider based on:
 
 * Task type
 * Model capability
@@ -267,8 +225,6 @@ Instead of sending every task to every model, the router can select an appropria
 * Speed
 * Cost
 * User configuration
-
-Example:
 
 ```text
 Task
@@ -289,11 +245,11 @@ Model Router
 
 ---
 
-# 🔄 Automatic Provider Fallback
+## 🔄 Automatic Provider Fallback
 
 A major planned feature of ALORA is **provider fallback**.
 
-If an API provider becomes unavailable or reaches its quota:
+If an AI provider becomes unavailable or reaches its quota:
 
 ```text
 Coder Agent
@@ -318,11 +274,9 @@ The task should not unnecessarily restart from the beginning.
 
 ---
 
-# 💾 Checkpoint & Resume System
+## 💾 Checkpoint & Resume System
 
 Before important execution steps, ALORA can maintain task checkpoints.
-
-Example:
 
 ```text
 TASK: CODE-008
@@ -350,17 +304,11 @@ Restore Task State
 Continue From Last Valid State
 ```
 
-The goal is:
-
-> **Provider failure should not automatically mean task failure.**
-
 ---
 
-# 💰 API Usage Optimization
+## 💰 API Usage Optimization
 
 ALORA is not intended to call every available AI model for every task.
-
-That would unnecessarily consume free API limits.
 
 The planned strategy is:
 
@@ -390,7 +338,7 @@ Multi-model comparison should be used only when it provides meaningful value.
 
 ---
 
-# 📊 Task Complexity
+## 📊 Task Complexity
 
 ALORA can classify tasks before execution.
 
@@ -409,17 +357,11 @@ ALORA can classify tasks before execution.
                 validation   review
 ```
 
-This helps balance:
-
-* Quality
-* Speed
-* API limits
-* Cost
-* Reliability
+This helps balance quality, speed, API limits, and cost.
 
 ---
 
-# 🔐 Secure API Manager
+## 🔐 Secure API Manager
 
 ALORA is planned to contain a dedicated **API Manager**.
 
@@ -427,7 +369,7 @@ Users will be able to configure supported providers and their API credentials.
 
 The API Manager will have its own password protection.
 
-### First-time setup
+### First-Time Setup
 
 ```text
 Create API Manager Password
@@ -439,7 +381,7 @@ Confirm Password
 Securely Store Password
 ```
 
-### Future access
+### Future Access
 
 ```text
 API Manager
@@ -457,7 +399,7 @@ API credentials should not be stored directly inside source code or plain-text p
 
 ---
 
-# 🌐 Capsule Hub
+## 🌐 Capsule Hub
 
 ALORA is planned to include its own integrated **Capsule Hub** instead of depending on a Chrome extension for browser-agent functionality.
 
@@ -499,21 +441,16 @@ Web Information
 Research Result
 ```
 
-The Capsule Hub is intended to remain independent from a browser extension so that ALORA can control its own browser automation layer.
-
 ---
 
-# 🖥️ User Interface
+## 🖥️ User Interface
 
 The UI is planned as a professional AI development workspace rather than a simple chatbot.
-
-Possible layout:
 
 ```text
 ┌──────────────────────────────────────────────────────────────┐
 │ ✦ ALORA Studio                                               │
 ├────────────┬──────────────────────────┬──────────────────────┤
-│            │                          │                      │
 │  PROJECT   │       CODE EDITOR        │      ALORA CHAT      │
 │            │                          │                      │
 │  📁 src    │                          │ User: Build...       │
@@ -530,13 +467,11 @@ Possible layout:
 └──────────────────────────────────────────────────────────────┘
 ```
 
-The user should be able to see the current execution process directly in the chat/workspace.
-
 ---
 
-# 👁️ Live Agent Activity
+## 👁️ Live Agent Activity
 
-The interface can show:
+The interface can show the current execution process directly to the user.
 
 ```text
 🔎 Research Agent
@@ -562,15 +497,11 @@ Overall progress:
 ████████████░░░░░░ 64%
 ```
 
-The goal is to make autonomous execution transparent to the user.
-
 ---
 
-# 🛠️ Technology Direction
+## 🛠️ Technology Direction
 
 The project is intended to be primarily Python-based.
-
-Possible stack:
 
 ```text
 Core Language
@@ -595,13 +526,11 @@ Packaging
     Windows executable / installer
 ```
 
-The final technology choices may evolve during development.
+Final technology choices may evolve during development.
 
 ---
 
-# 📦 Planned Project Architecture
-
-A possible structure:
+## 📦 Planned Project Architecture
 
 ```text
 ALORA-Studio/
@@ -613,7 +542,6 @@ ALORA-Studio/
 ├── .gitignore
 │
 ├── app/
-│   │
 │   ├── core/
 │   │   ├── orchestrator/
 │   │   ├── planner/
@@ -679,7 +607,7 @@ ALORA-Studio/
 
 ---
 
-# 🔌 Provider System
+## 🔌 Provider System
 
 ALORA is intended to use a provider-adapter architecture.
 
@@ -702,11 +630,9 @@ provider.health_check(...)
 provider.get_models(...)
 ```
 
-This allows the Model Router to work with different providers through a consistent interface.
-
 ---
 
-# 🧪 Validation Pipeline
+## 🧪 Validation Pipeline
 
 Generated work should not automatically be considered correct.
 
@@ -737,11 +663,9 @@ Reviewer
 Accepted Result
 ```
 
-For software-development tasks, validation is a critical part of the execution loop.
-
 ---
 
-# 🔁 Autonomous Execution Loop
+## 🔁 Autonomous Execution Loop
 
 The overall ALORA execution cycle is planned to look like:
 
@@ -793,7 +717,7 @@ Validate Again
 
 ---
 
-# 🎯 Long-Term Goals
+## 🎯 Long-Term Goals
 
 ALORA is being developed with the following long-term goals:
 
@@ -819,11 +743,15 @@ ALORA is being developed with the following long-term goals:
 
 ---
 
-# 🚧 Current Development
+## 🚧 Current Development
 
-ALORA is currently **under construction**.
+<div align="center">
 
-The project is being developed incrementally.
+# 🚧 UNDER CONSTRUCTION 🚧
+
+### **ALORA Studio is actively being built.**
+
+</div>
 
 Current focus areas include:
 
@@ -849,9 +777,9 @@ Current focus areas include:
 
 ---
 
-# 🗺️ Development Roadmap
+## 🗺️ Development Roadmap
 
-## Phase 1 — Foundation
+### Phase 1 — Foundation
 
 * Project structure
 * Python core
@@ -860,7 +788,7 @@ Current focus areas include:
 * Event system
 * Basic UI
 
-## Phase 2 — AI Gateway
+### Phase 2 — AI Gateway
 
 * Provider interface
 * API Manager
@@ -869,7 +797,7 @@ Current focus areas include:
 * Health checks
 * Fallback system
 
-## Phase 3 — Agent Engine
+### Phase 3 — Agent Engine
 
 * Agent interface
 * Agent registry
@@ -878,7 +806,7 @@ Current focus areas include:
 * Structured outputs
 * Project State
 
-## Phase 4 — Autonomous Workflow
+### Phase 4 — Autonomous Workflow
 
 * Planner
 * Task dependency graph
@@ -887,7 +815,7 @@ Current focus areas include:
 * Retry mechanism
 * Validation pipeline
 
-## Phase 5 — Development Agents
+### Phase 5 — Development Agents
 
 * Researcher
 * Architect
@@ -897,7 +825,7 @@ Current focus areas include:
 * Reviewer
 * Security Agent
 
-## Phase 6 — Capsule Hub
+### Phase 6 — Capsule Hub
 
 * Browser engine
 * Navigation
@@ -906,7 +834,7 @@ Current focus areas include:
 * Screenshots
 * Web testing
 
-## Phase 7 — Professional Workspace
+### Phase 7 — Professional Workspace
 
 * Project explorer
 * Code editor
@@ -916,7 +844,7 @@ Current focus areas include:
 * Logs
 * Project dashboard
 
-## Phase 8 — Distribution
+### Phase 8 — Distribution
 
 * Windows executable
 * Installer
@@ -927,7 +855,7 @@ Current focus areas include:
 
 ---
 
-# ⚠️ Important Disclaimer
+## ⚠️ Important Disclaimer
 
 ALORA is an experimental project under active development.
 
@@ -946,7 +874,7 @@ Provider availability will therefore be treated as configurable rather than perm
 
 ---
 
-# 📜 License
+## 📜 License
 
 This project is licensed under the **MIT License**.
 
@@ -954,31 +882,18 @@ See [`LICENSE`](LICENSE) for details.
 
 ---
 
-# ⭐ Project Status
+<div align="center">
 
-```text
-ALORA Studio
-Status: 🚧 UNDER CONSTRUCTION
+# ✦ ALORA Studio
 
-Architecture:      🛠️ Designing
-Core Engine:       🛠️ Developing
-Agent System:      🛠️ Developing
-AI Gateway:        🛠️ Developing
-Capsule Hub:       📋 Planned
-UI:                🛠️ Developing
-Testing:           📋 Planned
-Windows Build:     📋 Planned
-```
+### **Think it. Describe it. Plan it. Build it.**
 
----
+**One workspace. Multiple agents. Multiple models. One coordinated intelligence layer.**
 
-## ✦ ALORA
+<br>
 
-**Think it. Describe it. Plan it. Build it.**
+## 🚧 UNDER CONSTRUCTION 🚧
 
-> One workspace.
-> Multiple agents.
-> Multiple models.
-> One coordinated intelligence layer.
+**ALORA Studio is under construction.**
 
-**ALORA Studio is under construction. 🚧**
+</div>

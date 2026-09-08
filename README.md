@@ -1,7 +1,7 @@
-<div align="center">
-<img src="alora.png" alt="ALORA Studio Logo" width="800"/>
-</div>
-<br>
+<p align="center">
+  <img src="alora.png" alt="ALORA Studio Logo" width="800">
+</p>
+
 
 # 🚧 UNDER CONSTRUCTION 🚧
 
